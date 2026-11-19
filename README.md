@@ -38,4 +38,4 @@ This project was created to practice front-end development, JavaScript logic, an
 
 ## Author
 
-Computer Engineering Student
+Ronya
