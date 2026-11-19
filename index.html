@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusType | Productivity Studio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#home" class="logo">FocusType <span>♡</span></a>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#typing">Typing Test</a>
+            <a href="#focus">Focus Timer</a>
+            <a href="#stats">Statistics</a>
+        </div>
+    </nav>
+
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <span class="tag">YOUR PERSONAL PRODUCTIVITY SPACE</span>
+            <h1>Focus better.<br><span>Type faster.</span></h1>
+            <p>Build better habits, improve your typing skills and make every minute count.</p>
+            <a href="#typing" class="hero-button">Start Your Journey <span>♡</span></a>
+        </div>
+        <div class="hero-art">
+            <div class="art-circle">⌨️</div>
+            <span class="floating f1">✦</span>
+            <span class="floating f2">♡</span>
+            <span class="floating f3">✧</span>
+            <span class="floating f4">✿</span>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="typing-section" id="typing">
+            <p class="eyebrow">IMPROVE YOUR SKILLS</p>
+            <h2>Typing Speed Test</h2>
+            <p class="section-description">Practice a little every day and watch yourself improve.</p>
+
+            <div class="typing-card">
+                <div class="typing-settings">
+                    <label for="textSelect">Choose a topic</label>
+                    <select id="textSelect">
+                        <option value="daily">Daily English</option>
+                        <option value="technology">Technology</option>
+                        <option value="programming">Programming</option>
+                        <option value="motivation">Motivation</option>
+                    </select>
+
+                    <label for="durationSelect">Test duration</label>
+                    <select id="durationSelect">
+                        <option value="30">30 seconds</option>
+                        <option value="60" selected>60 seconds</option>
+                        <option value="120">120 seconds</option>
+                    </select>
+                </div>
+
+                <div class="typing-info">
+                    <div><span>TIME</span><strong id="typingTime">60</strong></div>
+                    <div><span>WPM</span><strong id="wpm">0</strong></div>
+                    <div><span>ACCURACY</span><strong id="accuracy">100%</strong></div>
+                </div>
+
+                <div class="typing-text" id="sampleText"></div>
+
+                <textarea id="typingInput" placeholder="Press Start Test and begin typing..." disabled></textarea>
+
+                <div class="typing-buttons">
+                    <button id="startTyping" class="primary-btn">Start Test</button>
+                    <button id="resetTyping" class="secondary-btn">Try Again</button>
+                </div>
+
+                <p id="typingResult" class="result-message" aria-live="polite"></p>
+            </div>
+        </section>
+
+        <section class="focus-section" id="focus">
+            <p class="eyebrow">TIME TO CONCENTRATE</p>
+            <h2>Focus Timer</h2>
+            <p class="section-description">Create your own study rhythm.</p>
+
+            <div class="timer-card">
+                <div class="timer-modes">
+                    <button class="mode active" data-mode="focus">Focus</button>
+                    <button class="mode" data-mode="break">Short Break</button>
+                </div>
+
+                <div class="timer-circle">
+                    <div id="timer">25:00</div>
+                    <span id="timerLabel">TIME TO FOCUS</span>
+                </div>
+
+                <div class="custom-time">
+                    <label for="focusMinutes">Focus minutes</label>
+                    <input type="number" id="focusMinutes" min="1" max="180" value="25">
+                    <label for="breakMinutes">Break minutes</label>
+                    <input type="number" id="breakMinutes" min="1" max="60" value="5">
+                    <button id="applyTime" class="secondary-btn">Apply Times</button>
+                </div>
+
+                <div class="timer-buttons">
+                    <button id="startTimer" class="primary-btn">Start</button>
+                    <button id="pauseTimer" class="secondary-btn">Pause</button>
+                    <button id="resetTimer" class="secondary-btn">Reset</button>
+                </div>
+
+                <p class="session-count">Completed focus sessions: <strong id="sessions">0</strong></p>
+                <p id="timerMessage" class="result-message" aria-live="polite"></p>
+            </div>
+        </section>
+
+        <section class="stats-section" id="stats">
+            <p class="eyebrow">YOUR PROGRESS</p>
+            <h2>Personal Statistics</h2>
+            <p class="section-description">Every small improvement counts.</p>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span>⌨️</span>
+                    <h3 id="bestWpm">0</h3>
+                    <p>Best WPM</p>
+                </div>
+                <div class="stat-card">
+                    <span>🎯</span>
+                    <h3 id="averageAccuracy">0%</h3>
+                    <p>Average Accuracy</p>
+                </div>
+                <div class="stat-card">
+                    <span>⏰</span>
+                    <h3 id="totalMinutes">0</h3>
+                    <p>Focus Minutes</p>
+                </div>
+                <div class="stat-card">
+                    <span>🌷</span>
+                    <h3 id="totalSessions">0</h3>
+                    <p>Completed Sessions</p>
+                </div>
+            </div>
+
+            <div class="weekly-card">
+                <h3>Weekly Focus Activity</h3>
+                <p>Your completed focus minutes each day</p>
+                <div class="weekly-chart" id="weeklyChart"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Made with focus and love ♡</p>
+        <p>FocusType © 2026</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
